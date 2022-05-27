@@ -1,0 +1,38 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CarsModel {
+  id: String!
+  created_at: String!
+  updated_at: String!
+  brand: String!
+  year: Float!
+  condition: String!
+  price: Float!
+}
+
+type Query {
+  getAllCars: [CarsModel!]!
+  getOneCar(id: String!): CarsModel!
+}
+
+type Mutation {
+  createCar(payload: CreateCarDto!): CarsModel!
+  updateCar(id: String!, payload: UpdateCarDto!): CarsModel!
+  deleteCar(id: String!): CarsModel!
+}
+
+input CreateCarDto {
+  brand: String!
+  year: Float!
+  condition: String!
+  price: Float!
+}
+
+input UpdateCarDto {
+  brand: String
+  year: Float
+  condition: String
+  price: Float
+}

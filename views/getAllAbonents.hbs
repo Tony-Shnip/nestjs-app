@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Get all abonents</title>
+  </head>
+  <body>
+    {{#each data.message}}
+    <div>Id: {{id}}</div>
+    <div>Username: {{username}}</div>
+    <div>Email: {{email}}</div>
+    <a href="http://localhost:3000/abonents/{{id}}">View</a>
+    <br><br>
+    {{/each}}
+    <a href="http://localhost:3000">To main page</a>
+  </body>
+</html>

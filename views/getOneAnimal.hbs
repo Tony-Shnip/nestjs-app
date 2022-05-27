@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Get animal {{data.message.id}}</title>
+  </head>
+  <body>
+    <div>Id: {{data.message.id}}</div>
+    <div>Type: {{data.message.type}}</div>
+    <div>Name: {{data.message.name}}</div>
+    <div>Age: {{data.message.age}}</div>
+    <br>
+    <a href="http://localhost:3000/animals">Back</a>
+    <br>
+    <form action="http://localhost:3000/animals/{{data.message.id}}/delete" method="POST">
+      <p>
+        <button>
+          Delete this animal
+        </button>
+      </p>
+    </form>
+    <br><br>
+    <form action="http://localhost:3000/animals/{{data.message.id}}" method="POST">
+      <p>
+        <label>Name</label>
+        <input type="text" name="name">
+      </p>
+      <p>
+        <label>Type</label>
+        <input type="text" name="type">
+      </p>
+      <p>
+        <label>Age</label>
+        <input type="number" name="age">
+      </p>
+      <p>
+        <label>Owner's Id</label>
+        <input type="text" name="ownerId">
+      </p>
+      <p>
+        <button>
+          Update this animal
+        </button>
+      </p>
+    </form>
+    <br><br><br>
+    <a href="http://localhost:3000">To main page</a>
+  </body>
+</html>
